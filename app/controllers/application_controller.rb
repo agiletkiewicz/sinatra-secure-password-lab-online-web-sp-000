@@ -20,7 +20,9 @@ class ApplicationController < Sinatra::Base
     @user = User.new
     @user.email = params[:email]
     @user.password = params[:password]
-    
+    if @user.save 
+    else 
+   end
 
   end
 
